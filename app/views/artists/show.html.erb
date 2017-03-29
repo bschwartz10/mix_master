@@ -6,7 +6,14 @@
   <%= image_tag @artist.image_path %><br/>
 </div>
 
+
 <div>
   <p><%= link_to "Edit", edit_artist_path %></p><br/>
   <p><%= link_to "Delete", artist_path(@artist), method: :delete %></p>
+</div>
+
+<div>
+  <p>
+    <%= link_to "New Song", new_artist_song_path(@artist) %>
+  </p>
 </div>
