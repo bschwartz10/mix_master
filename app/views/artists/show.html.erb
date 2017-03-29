@@ -1,0 +1,12 @@
+<div>
+  <h1><%= @artist.name %></h1>
+</div>
+
+<div>
+  <%= image_tag @artist.image_path %><br/>
+</div>
+
+<div>
+  <p><%= link_to "Edit", edit_artist_path %></p><br/>
+  <p><%= link_to "Delete", artist_path(@artist), method: :delete %></p>
+</div>
