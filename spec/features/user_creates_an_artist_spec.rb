@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.feature "A user vists the artists index page and clicks new artist" do
-  scenario "then they fill in the data and click Create Artist" do
-    artist_name = "Bob Marley"
+RSpec.feature "User submits a new artist" do
+  scenario "they see the page for the individual artist" do
+    artist_name       = "Bob Marley"
     artist_image_path = "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg"
 
-    visit '/artists'
-    click_on 'New Artist'
+    visit artists_path
+    click_on "New artist"
     fill_in "artist_name", with: artist_name
     fill_in "artist_image_path", with: artist_image_path
     click_on "Create Artist"
@@ -20,7 +20,7 @@ RSpec.feature "A user vists the artists index page and clicks new artist" do
       artist_image_path = "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg"
 
       visit artists_path
-      click_on 'New Artist'
+      click_on "New artist"
       fill_in "artist_image_path", with: artist_image_path
       click_on "Create Artist"
 

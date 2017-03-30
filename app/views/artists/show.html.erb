@@ -1,22 +1,5 @@
-<div>
-  <h1><%= @artist.name %></h1>
-</div>
-
-<div>
-  <%= image_tag @artist.image_path %><br/>
-</div>
-
-<!-- <div>
-  <%= link_to "#{@artist.name} Songs", artist_songs_path(@artist) %>
-</div> -->
-
-<div>
-  <p><%= link_to "Edit", edit_artist_path %></p><br/>
-  <p><%= link_to "Delete", artist_path(@artist), method: :delete %></p>
-</div>
-
-<div>
-  <p>
-    <%= link_to "New Song", new_artist_song_path(@artist) %>
-  </p>
-</div>
+<h1><%= @artist.name %></h1>
+<%= image_tag @artist.image_path %>
+<%= link_to "Edit", edit_artist_path(@artist) %>
+<%= link_to "Delete", artist_path(@artist), method: :delete %>
+<%= link_to "New song", new_artist_song_path(@artist) %>

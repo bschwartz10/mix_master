@@ -7,8 +7,8 @@ RSpec.feature "User submits a new song" do
     song_title = "One Love"
 
     visit artist_path(artist)
-    click_on "New Song"
-    fill_in "song_title", with: "One Love"
+    click_on "New song"
+    fill_in "song_title", with: song_title
     click_on "Create Song"
 
     expect(page).to have_content song_title
